@@ -1,0 +1,37 @@
+head {
+    background-color: aqua;
+}
+body {
+    background-color: rgb(241, 106, 232);
+    font-size: 28px;
+}
+h1 {
+    font-size: 44px;
+    font-family: fantasy;
+}
+p {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header {
+    background-color: #e038b1;
+    color: #DDDDDD;
+    text-align: center;
+    font-size: 32px;
+    word-spacing: 33%;
+    border-bottom: #ac2a87;
+    border-radius: 33%;
+    border-width: 35pt;
+}
+footer {
+    background-color: #71315f;
+    color: #aaaaaa
+}
+main {
+    text-align: center;
+    background-color: #ef95d6;
+}
+a {
+    font-size: 24px;
+    color: #DDDDDD
+}
