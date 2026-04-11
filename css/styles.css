@@ -10,7 +10,10 @@ h1 {
     font-family: fantasy;
 }
 p {
-    font-size: 18px;
+    
+    text-align: center;
+    text-indent: 6%;
+    font-size: 22px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 header {
@@ -34,4 +37,20 @@ main {
 a {
     font-size: 24px;
     color: #DDDDDD
+}
+ol {
+    text-align: center;
+    list-style: inside;
+}
+
+ul {
+    text-align: center;
+    list-style: inside;
+    list-style-type: none;
+}
+
+li {
+    text-align: match-parent;
+    text-justify: distribute;
+    
 }
