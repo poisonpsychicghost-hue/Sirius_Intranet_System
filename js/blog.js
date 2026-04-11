@@ -1,53 +1,72 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // ----- Memo Section -----
-  const blogFormMemo = document.getElementById('blogFormMemo');
-  const blogTextMemo = document.getElementById('blogTextMemo');
-  const blogListMemo = document.getElementById('blogListMemo');
-
-  let memos = JSON.parse(localStorage.getItem('blogListMemo')) || [];
-  blogListMemo.innerHTML = ""; // clear any static 'Content Coming Soon!' li's
-  memos.forEach(function(memo) {
-    const li = document.createElement('li');
-    li.textContent = memo;
-    blogListMemo.appendChild(li);
-  });
-
-  blogFormMemo.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const text = blogTextMemo.value.trim();
-    if (text) {
-      const li = document.createElement('li');
-      li.textContent = text;
-      blogListMemo.appendChild(li);
-      memos.push(text);
-      localStorage.setItem('blogListMemo', JSON.stringify(memos));
-      blogTextMemo.value = '';
-    }
-  });
-
-  // ----- Note Section -----
+//Notes
   const blogFormNote = document.getElementById('blogFormNote');
   const blogTextNote = document.getElementById('blogTextNote');
   const blogListNote = document.getElementById('blogListNote');
 
-  let notes = JSON.parse(localStorage.getItem('blogListNote')) || [];
-  blogListNote.innerHTML = ""; // clear any static 'Content Coming Soon!' li's
-  notes.forEach(function(note) {
-    const li = document.createElement('li');
-    li.textContent = note;
-    blogListNote.appendChild(li);
-  });
+  // GET notes on load
+  fetch('/api/all')
+    .then(response => response.json())
+    .then(data => {
+      data.notes.forEach(note => {
+        const li = document.createElement('li');
+        li.textContent = note;
+        blogListNote.appendChild(li);
+      });
+    });
 
+  // Submit new note
   blogFormNote.addEventListener('submit', function(e) {
     e.preventDefault();
     const text = blogTextNote.value.trim();
     if (text) {
-      const li = document.createElement('li');
-      li.textContent = text;
-      blogListNote.appendChild(li);
-      notes.push(text);
-      localStorage.setItem('blogListNote', JSON.stringify(notes));
-      blogTextNote.value = '';
+      fetch('/api/note', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ note: text })
+      })
+      .then(res => res.json())
+      .then(response => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        blogListNote.appendChild(li);
+        blogTextNote.value = '';
+      });
+    }
+  });
+//Memos
+  const blogFormMemo = document.getElementById('blogFormMemo');
+  const blogTextMemo = document.getElementById('blogTextMemo');
+  const blogListMemo = document.getElementById('blogListMemo');
+
+  // GET memos on load
+  fetch('/api/all')
+    .then(response => response.json())
+    .then(data => {
+      data.memos.forEach(memo => {
+        const li = document.createElement('li');
+        li.textContent = memo;
+        blogListMemo.appendChild(li);
+      });
+    });
+
+  // Submit new memo
+  blogFormMemo.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const text = blogTextMemo.value.trim();
+    if (text) {
+      fetch('/api/memo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ memo: text })
+      })
+      .then(res => res.json())
+      .then(response => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        blogListMemo.appendChild(li);
+        blogTextMemo.value = '';
+      });
     }
   });
 });
