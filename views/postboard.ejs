@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post Board</title>
+  </head>
+  <body>
+    <h2>Recent Memos</h2>
+    <% if (recentMemos && recentMemos.length > 0) { %>
+      <ul>
+        <% recentMemos.forEach(memo => { %>
+          <li><%= memo.title %> — <%= memo.content %> (<%= memo.date %>)</li>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No memos yet…</p>
+    <% } %>
+
+    <h2>Most Recent Note</h2>
+    <% if (recentNote && recentNote.length > 0) { %>
+      <p><%= recentNote[0].title %> — <%= recentNote[0].content %> (<%= recentNote[0].date %>)</p>
+    <% } else { %>
+      <p>No notes yet…</p>
+    <% } %>
+
+    <h2>Recent Ivy Updates</h2>
+    <% if (childNameMemo) { %>
+      <p><%= childNameMemo.title %> — <%= childNameMemo.content %> (<%= childNameMemo.date %>)</p>
+    <% } else { %>
+      <p>No matching memos found…</p>
+    <% } %>
+  </body>
+</html>

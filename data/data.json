@@ -1,0 +1,9 @@
+{
+  "memos": [
+    { "title": "Memo 1", "content": "Hello world", "date": "2026-04-10" },
+    { "title": "Memo 2", "content": "Child-name: Jamal", "date": "2026-04-09" }
+  ],
+  "notes": [
+    { "title": "Blog 1", "content": "First blog post", "date": "2026-04-08" }
+  ]
+}
