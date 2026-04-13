@@ -23,13 +23,18 @@ header {
     color: #DDDDDD;
     text-align: center;
     font-size: 32px;
-    word-spacing: 25%;
+    word-spacing: -15%;
     border-bottom: #ac2a87;
     border-radius: 66%;
     border-width: 35pt;
     padding-bottom: 10px;
     padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-bottom: -2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 footer {
     background-color: #71315f;
@@ -66,7 +71,7 @@ li {
 }
 
 #navTitle {
-    font-size: 36px;
+    font-size: 32px;
     transform: translateY(-02%);
     transform: translateX(-2%);
     color: #300120;
@@ -90,4 +95,8 @@ li {
 #blogTextNote {
     background-color: #71315f;
     color: #FFFFFF
+}
+#mainPageNav {
+   text-align: left; 
+   transform: translateX(-23%);
 }
