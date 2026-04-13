@@ -8,7 +8,7 @@
 
         <body>
             <header>
-                <p>Main Site Navigation</p>
+                <p id="navTitle">Main Site Navigation</p>
                 <nav aria-label="Sirius Intranet Main Site Navigation">
                     <ul>
                         <li><a href="/sirius-main">Main</a></li>
@@ -20,11 +20,11 @@
                 <h1>House Hold Note Space</h1>
                 <section>
                     <section>
-                        <h2>Most recent Ivy News:</h2>
+                        <h2 class="highlight">Most recent Ivy News:</h2>
                             <% if (childNameMemo && childNameMemo.length > 0) { %>
                                 <ul>
                                     <% childNameMemo.forEach(memo => { %>
-                                        <li><%= memo.title %> — <%= memo.content %> (<%= memo.date %>)</li>
+                                        <li class="highlight"><%= memo.title %> — <%= memo.content %> (<%= memo.date %>)</li>
                                     <% }); %>
                                 </ul>
                             <% } else { %>
@@ -49,7 +49,7 @@
                     <form id="blogFormMemo">
                         <textarea id="blogTextMemo" rows="4" cols="40" placeholder="Write your memo here..."></textarea>
                         <br>
-                        <button type="submit">Post</button>
+                        <button type="submit" class="submitButton">Post</button>
                     </form>
                 </section>
                 
@@ -68,7 +68,7 @@
                     <form id="blogFormNote">
                         <textarea id="blogTextNote" rows="4" cols="40" placeholder="Write your memo here..."></textarea>
                         <br>
-                        <button type="submit">Post</button>
+                        <button type="submit" class="submitButton">Post</button>
                     </form>
 
                 </section>

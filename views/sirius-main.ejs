@@ -7,7 +7,7 @@
         </head>
         <body> 
             <header>
-                <p>Main Site Navigation</p>
+                <p id="navTitle">Main Site Navigation</p>
                 <nav aria-label="Main Site navigation">
                     <a href="../html/sirius-directory.html">Directory</a>
                     <a href="../html/sirius-pantry-manager-main.html">Pantry Manger</a>
@@ -23,9 +23,9 @@
                 
 
                     <section>
-                    <h2>Most recent Ivy News:</h2>
+                    <h2 class="highlight">Most recent Ivy News:</h2>
                     <% if (childNameMemo) { %>
-                        <p><%= childNameMemo.title %> — <%= childNameMemo.content %> (<%= childNameMemo.date %>)</p>
+                        <p class="highlight"><%= childNameMemo.title %> — <%= childNameMemo.content %> (<%= childNameMemo.date %>)</p>
                     <% } else { %>
                         <p>No matching memos found…</p>
                     <% } %>

@@ -54,3 +54,34 @@ li {
     text-justify: distribute;
     
 }
+
+.highlight {
+    color: rgb(29, 107, 76);
+    font-weight: bold;
+}
+
+#navTitle {
+    font-size: 36px;
+    transform: translateY(85%);
+    color: #300120;
+    font-weight: bold;
+}
+.submitButton {
+    color: rgb(48, 67, 16);
+    font-weight: bold;
+    background-color: rgb(133, 110, 155);
+}
+#shrekMainTitle {
+    color: rgb(8, 194, 8);
+    font-weight: bold;
+    font-size: 48px
+    
+}
+#blogTextMemo {
+    background-color: #71315f;
+    color: #FFFFFF
+}
+#blogTextNote {
+    background-color: #71315f;
+    color: #FFFFFF
+}
