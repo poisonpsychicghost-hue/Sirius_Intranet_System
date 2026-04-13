@@ -11,13 +11,11 @@ function getLatest(book, numberListed) {
     };
 };
 
-function filterByKeyword(book, keyword) {
+function filterByKeyword(book, keyword, n) {
     let filteredBook = book.filter((book) => book.content.toLowerCase().includes(keyword.toLowerCase()));
     let sortedBook = filteredBook.sort((a, b) => new Date(b.date) - new Date(a.date) );
-    let mostRecentFiltered = sortedBook.slice(0, 1);
-    return {
-        mostRecentFiltered
-    };
+    return sortedBook.slice(0, n);
+    
 };
 
 
@@ -30,8 +28,8 @@ exports.getPostBoard = (req, res) => {
     const data = JSON.parse(file);
     const recentMemos = getLatest(data.memos, 5).mostRecent;
     const recentNote = getLatest(data.notes, 5).mostRecent;
-    const childNameMemo = filterByKeyword(data.memos, 'Ivy').mostRecentFiltered[0, 2];
-
+    const childNameMemo = filterByKeyword(data.memos, 'Ivy', 3);
+    console.log("controller", childNameMemo)
     res.render('sirius-notes-memo', {
         recentMemos,
         recentNote,

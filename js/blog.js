@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-//Notes
-  const blogFormNote = document.getElementById('blogFormNote');
-  const blogTextNote = document.getElementById('blogTextNote');
-  const blogListNote = document.getElementById('blogListNote');
+
 
 setInterval(() => {
   fetch('/api/all')
@@ -23,7 +20,13 @@ setInterval(() => {
         blogListMemo.appendChild(li);
       });
     });
-}, 3000); // Poll every 3 seconds
+}, 10000); // Poll every 3 seconds
+//Notes
+  const blogFormNote = document.getElementById('blogFormNote');
+  const blogTextNote = document.getElementById('blogTextNote');
+  const blogListNote = document.getElementById('blogListNote');
+
+
 
   // GET notes on load
   fetch('/api/all')

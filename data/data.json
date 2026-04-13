@@ -1,9 +1,31 @@
 {
   "memos": [
-    { "title": "Memo 1", "content": "First Note! Nothing to add :}", "date": "2026-04-13" }
-    
+    {
+      "title": "Memo 3",
+      "content": "Added 3\nIvy",
+      "date": "2026-04-13"
+    },
+    {
+      "title": "Memo 2",
+      "content": "Ivy First Note!",
+      "date": "2026-04-13"
+    },
+    {
+      "title": "Memo 1",
+      "content": "First Note! Nothing to add :}",
+      "date": "2026-04-13"
+    }
   ],
   "notes": [
-    { "title": "Blog 1", "content": "First blog post", "date": "2026-04-13" }
+    {
+      "title": "Note 2",
+      "content": "Added",
+      "date": "2026-04-13"
+    },
+    {
+      "title": "Note 1",
+      "content": "First blog post, Ivy Was Here",
+      "date": "2026-04-13"
+    }
   ]
 }

@@ -12,19 +12,26 @@
                 <nav aria-label="Sirius Intranet Main Site Navigation">
                     <ul>
                         <li><a href="/sirius-main">Main</a></li>
-                        <li><a href="sirius-directory.html">Directory</a></li>
+                        <li><a href="../html/sirius-directory.html">Directory</a></li>
                     </ul>
                 </nav>
             </header>
             <main>
                 <h1>House Hold Note Space</h1>
                 <section>
-                     <h2>Recent Ivy Updates</h2>
-                    <% if (childNameMemo) { %>
-                        <p><%= childNameMemo.title %> — <%= childNameMemo.content %> (<%= childNameMemo.date %>)</p>
-                    <% } else { %>
-                        <p>No matching memos found…</p>
-                    <% } %>
+                    <section>
+                        <h2>Most recent Ivy News:</h2>
+                            <% if (childNameMemo && childNameMemo.length > 0) { %>
+                                <ul>
+                                    <% childNameMemo.forEach(memo => { %>
+                                        <li><%= memo.title %> — <%= memo.content %> (<%= memo.date %>)</li>
+                                    <% }); %>
+                                </ul>
+                            <% } else { %>
+                                <p>No matching memos found…</p>
+                            <% } %>
+                    </section>
+
                 </section>
                 <section>
                     <h2>House Hold Memos:</h2>
