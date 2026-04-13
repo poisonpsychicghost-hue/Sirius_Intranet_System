@@ -21,10 +21,13 @@ header {
     color: #DDDDDD;
     text-align: center;
     font-size: 32px;
-    word-spacing: 33%;
+    word-spacing: 25%;
     border-bottom: #ac2a87;
-    border-radius: 33%;
+    border-radius: 66%;
     border-width: 35pt;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: -2%;
 }
 footer {
     background-color: #71315f;
@@ -62,7 +65,8 @@ li {
 
 #navTitle {
     font-size: 36px;
-    transform: translateY(85%);
+    transform: translateY(-02%);
+    transform: translateX(-2%);
     color: #300120;
     font-weight: bold;
 }
