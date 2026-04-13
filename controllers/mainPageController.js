@@ -28,11 +28,11 @@ exports.getPostBoard = (req, res) => {
             return res.status(500).send('Error Loading Data');
         }
     const data = JSON.parse(file);
-    const recentMemos = getLatest(data.memos, 5).mostRecent;
-    const recentNote = getLatest(data.notes, 5).mostRecent;
-    const childNameMemo = filterByKeyword(data.memos, 'Ivy').mostRecentFiltered[0, 2];
+    const recentMemos = getLatest(data.memos, 3).mostRecent;
+    const recentNote = getLatest(data.notes, 1).mostRecent;
+    const childNameMemo = filterByKeyword(data.memos, 'Ivy').mostRecentFiltered[0];
 
-    res.render('postboard', {
+    res.render('sirius-main', {
         recentMemos,
         recentNote,
         childNameMemo

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="../css/styles.css">
+            <title>Sirius Intranet System: Main Page</title>
+        </head>
+        <body> 
+            <header>
+                <p>Main Site Navigation</p>
+                <nav aria-label="Main Site navigation">
+                    <a href="../html/sirius-directory.html">Directory</a>
+                    <a href="../html/sirius-pantry-manager-main.html">Pantry Manger</a>
+                    <a href="../html/sirius-blog-memo.html">Blog/Memos</a>
+                </nav>
+            </header>
+            <main>
+                <h1>Sirius Systems Intranet Main Page</h1>
+                <p>Welcome! If You Can Read This, I Love You!</p>
+
+                <section>
+                    <h2>Recent Family Memos</h2>
+                
+
+                    <section>
+                    <h2>Most recent Ivy News:</h2>
+                    <% if (childNameMemo) { %>
+                        <p><%= childNameMemo.title %> — <%= childNameMemo.content %> (<%= childNameMemo.date %>)</p>
+                    <% } else { %>
+                        <p>No matching memos found…</p>
+                    <% } %>
+                    </section>
+
+                    <section>
+                    <h2>Recent Memos:</h2>
+                    <% if (recentMemos && recentMemos.length > 0) { %>
+                        <ul>
+                            <% recentMemos.forEach(memo => { %>
+                            <li><%= memo.title %> — <%= memo.content %> (<%= memo.date %>)</li>
+                                <% }); %>
+                        </ul>
+                    <% } else { %>
+                        <p>No memos yet…</p>
+                    <% } %>
+                    </section>
+
+                    <section>
+                    <h2>Most Recent Note</h2>
+                    <% if (recentNote && recentNote.length > 0) { %>
+                        <p><%= recentNote[0].title %> — <%= recentNote[0].content %> (<%= recentNote[0].date %>)</p>
+                    <% } else { %>
+                        <p>No notes yet…</p>
+                    <% } %>
+                    </section>
+                </section>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>Random Ivy Photo!</h2>
+                <!--build an asset folder with Ivy photos that cycle-->
+                <img src="../assets/ivy-photo-1.jpg" alt="A Photo of Ivy, but not my kid">
+            </main>
+            <footer>
+                <p>Site Built by: Sirius  </p>
+            </footer>
+             <script src="../js/blog.js" defer></script>
+        </body>
+        </body>
+    </html>
