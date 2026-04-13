@@ -32,7 +32,7 @@ exports.getPostBoard = (req, res) => {
     const recentNote = getLatest(data.notes, 5).mostRecent;
     const childNameMemo = filterByKeyword(data.memos, 'Ivy').mostRecentFiltered[0, 2];
 
-    res.render('postboard', {
+    res.render('sirius-notes-memo', {
         recentMemos,
         recentNote,
         childNameMemo
