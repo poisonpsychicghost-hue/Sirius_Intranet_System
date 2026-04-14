@@ -100,3 +100,30 @@ li {
    text-align: left; 
    transform: translateX(-23%);
 }
+
+.jokesRow {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+
+
+#headlineStrip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.headlineText {
+    margin: 0;
+
+}
+
+.headlineIssue {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
