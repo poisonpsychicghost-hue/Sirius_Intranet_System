@@ -25,6 +25,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 app.use(express.static('css'));
 app.use(express.static('assets'));
+app.use(express.static('js'));
 app.use('/sirius-notes-memo', postBoardRoutes);
 app.use('/sirius-main', mainPageRoutes);
 
