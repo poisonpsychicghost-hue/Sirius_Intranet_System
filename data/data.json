@@ -29,7 +29,7 @@
     },
     {
       "title": "Note 1",
-      "content": "First blog post, Ivy Was Here",
+      "content": "First blog post, \nIvy Was Here",
       "date": "2026-04-13"
     }
   ]
