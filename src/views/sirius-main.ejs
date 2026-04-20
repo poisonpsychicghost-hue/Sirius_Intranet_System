@@ -24,35 +24,18 @@
                 
 
                     <section>
-                    <h2 class="highlight">Most recent Ivy News:</h2>
-                    <% if (childNameMemo) { %>
-                        <p class="highlight"><%= childNameMemo.title %> — <%= childNameMemo.content %> (<%= childNameMemo.date %>)</p>
-                    <% } else { %>
-                        <p>No matching memos found…</p>
-                    <% } %>
+                
                     </section>
 
                     <section>
                     <h2>Recent Memos:</h2>
-                    <% if (recentMemos && recentMemos.length > 0) { %>
-                        <ul>
-                            <% recentMemos.forEach(memo => { %>
-                            <li><%= memo.title %> — <%= memo.content %> (<%= memo.date %>)</li>
-                                <% }); %>
-                        </ul>
-                    <% } else { %>
-                        <p>No memos yet…</p>
-                    <% } %>
+               
                     </section>
 
                     <section>
                     <h2>Most Recent Note</h2>
-                    <% if (recentNote && recentNote.length > 0) { %>
-                        <p><%= recentNote[0].title %> — <%= recentNote[0].content %> (<%= recentNote[0].date %>)</p>
-                    <% } else { %>
-                        <p>No notes yet…</p>
-                    <% } %>
-                    </section>
+                
+                    </section> 
                 </section>
                 <br>
                 <br>
@@ -94,8 +77,8 @@
             <footer>
                 <p>Site Built by: Sirius  </p>
             </footer>
-            <script src="../js/blog.js" defer></script>
-            <script src="/popup-alert.js"></script>
+            <script src="../public/js/blog.js" defer></script>
+            
         </body>
         
     </html>

@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 const fs = require('fs');
+const path = require('path')
 const DATA_FILE = "./data/data.json";
 const postBoardRoutes = require('./src/routes/postBoard');
 const mainPageRoutes = require('./src/routes/mainPage');
@@ -10,7 +11,7 @@ const mainPageRoutes = require('./src/routes/mainPage');
 
 
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/src/views');
+app.set('views', path.join(__dirname, 'src', 'views'));
 
 app.get("/health", (req, res) =>{
     res.send("Ok");
