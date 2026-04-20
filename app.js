@@ -3,13 +3,13 @@ const app = express();
 const PORT = 3000;
 const fs = require('fs');
 const DATA_FILE = "./data/data.json";
-const postBoardRoutes = require('./routes/postBoard');
-const mainPageRoutes = require('./routes/mainPage');
+const postBoardRoutes = require('./src/routes/postBoard');
+const mainPageRoutes = require('./src/routes/mainPage');
 
 
 
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/src/views');
 
 app.get("/health", (req, res) =>{
     res.send("Ok");
@@ -23,9 +23,9 @@ app.get('/api/all', (req, res) => {
 
 app.use(express.json());
 app.use(express.static(__dirname));
-app.use(express.static('css'));
-app.use(express.static('assets'));
-app.use(express.static('js'));
+app.use(express.static('public/css'));
+app.use(express.static('public/images'));
+app.use(express.static('public/js'));
 app.use('/sirius-notes-memo', postBoardRoutes);
 app.use('/sirius-main', mainPageRoutes);
 
