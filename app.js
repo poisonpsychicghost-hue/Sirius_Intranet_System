@@ -1,3 +1,4 @@
+console.log("APP is Active")
 const express = require("express");
 const app = express();
 const PORT = 3000;
@@ -28,7 +29,9 @@ app.use(express.static('public/images'));
 app.use(express.static('public/js'));
 app.use('/sirius-notes-memo', postBoardRoutes);
 app.use('/sirius-main', mainPageRoutes);
-
+app.get('/', (req, res) => {
+  res.send('/sirius-main');
+});
 
 app.post('/api/memo', (req, res) => {
   const memoText = req.body.memo;
